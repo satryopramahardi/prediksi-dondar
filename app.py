@@ -59,24 +59,24 @@ body = dbc.Container(
             }
         ),
 
-        # dbc.Row(
-        #     [
-        #         dbc.Col(
-        #             [
-        #                 dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True,size='sm',responsive ='sm')
-        #             ],
-        #             md=4,
-        #         ),
-        #         dbc.Col(
-        #             [
-        #                 html.H2("Graph"),
-        #                 dcc.Graph(
-        #                     figure={"data": [{"x": df.Month, "y": df.Donasi}]}
-        #                 ),
-        #             ]
-        #         ),
-        #     ]
-        # )
+        dbc.Row(
+            [
+                dbc.Col(
+                    [
+                        dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True,size='sm',responsive ='sm')
+                    ],
+                    md=4,
+                ),
+                dbc.Col(
+                    [
+                        html.H2("Graph"),
+                        dcc.Graph(
+                            figure={"data": [{"x": df.Month, "y": df.Donasi}]}
+                        ),
+                    ]
+                ),
+            ]
+        )
     ],
     className="mt-4",
 )
